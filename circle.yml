@@ -6,9 +6,11 @@ dependencies:
     override:
         - mkdir -p ~/.local; ln -s $HOME/bin ~/.local/bin
         - curl -L https://www.stackage.org/stack/linux-x86_64 | tar xz --wildcards --strip-components=1 -C ~/bin '*/stack'
+        - sudo apt-get update && sudo apt-get upgrade
+        - sudo apt-get install pkg-config
 test:
     override:
         - stack install
-        - cat ~/.stack/build-plan/lts-7.8.yaml | perl packages.pl | build-all-exe > build-all.cabal
+        - "cat ~/.stack/build-plan/$(cat stack.yaml | sed -n 's/resolver: *//p').yaml | perl packages.pl | build-all-exe > build-all.cabal"
         - stack build
 
