@@ -1,0 +1,13 @@
+machine:
+    pre:
+        - git config --global user.email "admin@xnu.kr"
+        - git config --global user.name "Xnuk Shuman"
+dependencies:
+    override:
+        - curl -L https://www.stackage.org/stack/linux-x86_64 | tar xz --wildcards --strip-components=1 -C ~/bin '*/stack'
+test:
+    override:
+        - stack build
+        - cat ~/.stack/build-plan/lts-7.8.yaml | perl packages.pl | stack runhaskell -- -Wall cabal.hs > build-all.cabal
+        - stack build
+
