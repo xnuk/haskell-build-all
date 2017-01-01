@@ -10,7 +10,7 @@ dependencies:
         - sudo apt install perl perl-base pkg-config
 test:
     override:
-        - stack install
+        - stack install --install-ghc
         - "cat ~/.stack/build-plan/$(cat stack.yaml | sed -n 's/resolver: *//p').yaml | perl packages.pl | build-all-exe > build-all.cabal"
         - stack build
 
