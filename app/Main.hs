@@ -15,6 +15,8 @@ blacklist :: String -> Bool
 blacklist str = any ($ str)
     [ is "Win32"
     , pre "Win32-"
+    , is "bindings-GLFW"
+    , is "bindings-libzip"
     ]
     where is = (==)
           pre = isPrefixOf
