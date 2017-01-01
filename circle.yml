@@ -7,7 +7,7 @@ dependencies:
         - mkdir -p ~/.local; ln -s $HOME/bin ~/.local/bin
         - curl -L https://www.stackage.org/stack/linux-x86_64 | tar xz --wildcards --strip-components=1 -C ~/bin '*/stack'
         - sudo apt-get update
-        - sudo apt install perl perl-base pkg-config
+        - sudo apt install perl perl-base pkg-config libzip-dev
 test:
     override:
         - stack install --install-ghc
