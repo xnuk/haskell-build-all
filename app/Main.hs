@@ -43,6 +43,8 @@ blacklist str = any ($ str)
     , is "nettle"
     , is "hOpenPGP"
     , is "hopenpgp-tools"
+
+    , is "leveldb-haskell"
     ]
     where is = (==)
           pre = isPrefixOf
