@@ -35,6 +35,11 @@ blacklist str = any ($ str)
     , is "cryptohash" -- DEPRECATED
     , pre "cryptohash-"
     , is "executable-hash"
+
+    , is "discount"
+    , is "fft"
+    , is "htaglib"
+    , is "hfsevents"
     ]
     where is = (==)
           pre = isPrefixOf
