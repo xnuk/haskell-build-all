@@ -22,6 +22,7 @@ blacklist str = any ($ str)
     , is "bindings-libzip"
     , is "LibZip"
 
+    , is "hid"
     , is "hidapi"
     , is "hmpfr"
     , is "hs-GeoIP"
@@ -37,8 +38,6 @@ blacklist str = any ($ str)
     , is "executable-hash"
 
     , is "discount"
-    , is "fft"
-    , is "vector-fftw"
     , is "htaglib"
     , is "hfsevents"
     ]
