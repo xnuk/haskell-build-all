@@ -22,6 +22,7 @@ blacklist str = any ($ str)
     , is "hidapi"
     , is "hmpfr"
     , is "hs-GeoIP"
+    , is "X11"
     ]
     where is = (==)
           pre = isPrefixOf
