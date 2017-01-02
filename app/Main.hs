@@ -26,11 +26,11 @@ blacklist str = any ($ str)
     , is "hmpfr"
     , is "hs-GeoIP"
 
-    , is "X11"
-    , pre "X11-"
-    , is "xmonad"
-    , pre "xmonad-"
-    , is "Xauth"
+--    , is "X11"
+--    , pre "X11-"
+--    , is "xmonad"
+--    , pre "xmonad-"
+--    , is "Xauth"
 
     , is "cryptohash" -- DEPRECATED
     , pre "cryptohash-"
