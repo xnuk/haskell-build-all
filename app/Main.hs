@@ -30,9 +30,11 @@ blacklist str = any ($ str)
     , pre "X11-"
     , is "xmonad"
     , pre "xmonad-"
+    , is "Xauth"
 
     , is "cryptohash" -- DEPRECATED
     , pre "cryptohash-"
+    , is "executable-hash"
     ]
     where is = (==)
           pre = isPrefixOf
