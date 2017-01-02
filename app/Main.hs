@@ -15,14 +15,21 @@ blacklist :: String -> Bool
 blacklist str = any ($ str)
     [ is "Win32"
     , pre "Win32-"
+
     , is "bindings-GLFW"
     , is "GLFW-b"
+
     , is "bindings-libzip"
     , is "LibZip"
+
     , is "hidapi"
     , is "hmpfr"
     , is "hs-GeoIP"
+
     , is "X11"
+    , pre "X11-"
+    , is "xmonad"
+    , pre "xmonad-"
     ]
     where is = (==)
           pre = isPrefixOf
