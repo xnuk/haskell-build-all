@@ -19,6 +19,10 @@ blacklist str = any ($ str)
     , is "GLFW-b"
     , is "bindings-libzip"
     , is "LibZip"
+    , is "hidapi"
+    , is "hmpfr"
+    , is "gd"
+    , is "hs-GeoIP"
     ]
     where is = (==)
           pre = isPrefixOf
