@@ -40,6 +40,9 @@ blacklist str = any ($ str)
     , is "discount"
     , is "htaglib"
     , is "hfsevents"
+    , is "nettle"
+    , is "hOpenPGP"
+    , is "hopenpgp-tools"
     ]
     where is = (==)
           pre = isPrefixOf
