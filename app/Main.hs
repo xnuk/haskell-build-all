@@ -60,7 +60,7 @@ blacklist str = any ($ str)
     , is "cairo"
     , is "Chart-cairo"
     , is "gi-cairo"
-    . is "diagrams-cairo"
+    , is "diagrams-cairo"
     ]
     where is = (==)
           pre = isPrefixOf
