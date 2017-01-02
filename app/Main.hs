@@ -16,7 +16,9 @@ blacklist str = any ($ str)
     [ is "Win32"
     , pre "Win32-"
     , is "bindings-GLFW"
+    , is "GLFW-b"
     , is "bindings-libzip"
+    , is "LibZip"
     ]
     where is = (==)
           pre = isPrefixOf
