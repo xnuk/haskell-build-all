@@ -38,6 +38,7 @@ blacklist str = any ($ str)
 
     , is "discount"
     , is "fft"
+    , is "vector-fftw"
     , is "htaglib"
     , is "hfsevents"
     ]
