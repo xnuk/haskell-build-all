@@ -46,9 +46,21 @@ blacklist str = any ($ str)
 
     , is "leveldb-haskell"
 
+    , is "webkitgtk3"
     , is "webkitgtk3-javascriptcore"
+
     , is "glib"
+    , is "gtk"
+    , is "gtk3"
+    , is "gtk2hs-buildtools"
+    , is "gtksourceview3"
+    , is "gi-gtk"
+    , is "diagrams-gtk"
+
     , is "cairo"
+    , is "Chart-cairo"
+    , is "gi-cairo"
+    . is "diagrams-cairo"
     ]
     where is = (==)
           pre = isPrefixOf
