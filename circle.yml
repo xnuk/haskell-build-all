@@ -17,11 +17,11 @@ dependencies:
             timeout: 1200
         - "timeout 7100 stack build -j1 || true":
             timeout: 1200
-        - "stack build || true"
+        - "stack build || true":
             timeout: 1200
-        - "stack build || true"
+        - "stack build || true":
             timeout: 1200
-        - "stack build || true"
+        - "stack build || true":
             timeout: 1200
     cache_directories:
         - ~/.stack
