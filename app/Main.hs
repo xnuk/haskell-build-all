@@ -45,6 +45,10 @@ blacklist str = any ($ str)
     , is "hopenpgp-tools"
 
     , is "leveldb-haskell"
+
+    , is "webkitgtk3-javascriptcore"
+    , is "glib"
+    , is "cairo"
     ]
     where is = (==)
           pre = isPrefixOf
