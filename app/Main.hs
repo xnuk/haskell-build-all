@@ -61,6 +61,8 @@ blacklist str = any ($ str)
     , is "Chart-cairo"
     , is "gi-cairo"
     , is "diagrams-cairo"
+
+    , is "language-fortran" -- DEPRECATED
     ]
     where is = (==)
           pre = isPrefixOf
