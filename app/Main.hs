@@ -31,7 +31,8 @@ blacklist str = any ($ str)
     , is "xmonad"
     , pre "xmonad-"
 
-    , is "cryptohash"
+    , is "cryptohash" -- DEPRECATED
+    , pre "cryptohash-"
     ]
     where is = (==)
           pre = isPrefixOf
