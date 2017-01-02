@@ -11,12 +11,17 @@ dependencies:
         - stack install --install-ghc
         - "cat ~/.stack/build-plan/$(cat stack.yaml | sed -n 's/resolver: *//p').yaml | perl packages.pl | build-all-exe > build-all.cabal"
         - cp build-all.cabal $CIRCLE_ARTIFACTS
-        - "stack build -j1 || true":
+        - "timeout 7100 stack build -j1 || true":
+            timeout: 1200
+        - "timeout 7100 stack build -j1 || true":
+            timeout: 1200
+        - "timeout 7100 stack build -j1 || true":
             timeout: 1200
     cache_directories:
         - ~/.stack
         - .stack-work
 test:
     override:
-        - stack build
+        - stack build:
+            timeout: 1200
 
