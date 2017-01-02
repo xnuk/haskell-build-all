@@ -9,6 +9,9 @@ dependencies:
         - sudo apt-get update
         - sudo apt install perl perl-base pkg-config
         - stack install --install-ghc
+    cache_directories:
+        - ~/.stack
+        - .stack-work
 test:
     override:
         - "cat ~/.stack/build-plan/$(cat stack.yaml | sed -n 's/resolver: *//p').yaml | perl packages.pl | build-all-exe > build-all.cabal"
